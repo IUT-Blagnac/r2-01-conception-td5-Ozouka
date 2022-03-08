@@ -1,0 +1,26 @@
+@startuml DC
+class Chantier{
+    dateD
+    dateF
+    adresse
+    getAdresse()
+    affecterArtisan()
+}
+
+class Artisan{
+    salaire
+    coordonnee
+    getPaye()
+}
+
+class Travailler{
+    nbHeure
+    debMission
+    finMission
+    calculerPaye()
+}
+
+Artisan "1..*" -- "0..*" Chantier
+(Artisan,Chantier) .. Travailler
+
+@enduml
